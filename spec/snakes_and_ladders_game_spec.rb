@@ -1,11 +1,7 @@
 require 'spec_helper'
 
 describe SnakesAndLaddersGame do
-  it 'has a version number' do
-    expect(SnakesAndLaddersGame::VERSION).not_to be nil
-  end
-
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'has a version' do
+    expect(VERSION).to_not be_nil
   end
 end

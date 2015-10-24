@@ -8,7 +8,7 @@ module SnakesAndLaddersGame
     end
     
     def enter(player, squares)
-      puts "player is bitten by the snake at #{value}"
+      puts "#{player.name} is bitten by the snake at #{value}"
       squares[to - 1].enter(player)
     end
     

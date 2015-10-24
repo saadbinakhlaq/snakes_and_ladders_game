@@ -19,7 +19,6 @@ module SnakesAndLaddersGame
     def move(player)
       current_square = squares[player.current_square - 1]
       current_square.exit(player)
-      
       to_square = squares[current_square.value + player.dice_rolls.last - 1]
       
       if %w(snake ladder).include? to_square.name
