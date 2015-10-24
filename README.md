@@ -1,23 +1,23 @@
 # SnakesAndLaddersGame
 ## Installation
 
-Add this line to your application's Gemfile:
+clone this repo
 
-```ruby
-gem 'snakes_and_ladders_game'
-```
+then run
+
+    $ gem build snakes_and_ladders_game.gemspec
 
 And then execute:
 
-    $ bundle
+    $ gem install snakes_and_ladders_game-0.1.0.gem
 
-Or install it yourself as:
-
-    $ gem install snakes_and_ladders_game
-
+Then go to irb or pry console
+    $ pry
 ## Usage
 
 ```ruby
+require 'snakes_and_ladders_game'
+
 player1 = Player.new 'player1'
 player2 = Player.new 'player2'
 game = Game.new [player1, player2]
