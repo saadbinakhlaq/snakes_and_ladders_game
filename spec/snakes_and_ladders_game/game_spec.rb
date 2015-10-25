@@ -31,19 +31,19 @@ describe Game do
 
     context 'dice roll is greater than board size' do
       it 'does not moves the current player' do
-        player1.current_square = 9
+        player1.current_square = 99
         allow(game).to receive(:current_player) { player1 }
         allow(Dice).to receive(:roll) { 2 }
         game.play_turn
-        expect(player1.current_square).to eq(9)  
+        expect(player1.current_square).to eq(99)  
       end
     end
 
     context 'player wins the game' do
       it 'declares the player who has won' do
-        player1.current_square = 9
+        player1.current_square = 98
         allow(game).to receive(:current_player) { player1 }
-        allow(Dice).to receive(:roll) { 1 }
+        allow(Dice).to receive(:roll) { 2 }
         
         output = capture_stdout { game.play_turn }
         expect(output).to include("Game over #{player1.name} has won the game")

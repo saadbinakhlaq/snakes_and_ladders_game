@@ -30,6 +30,12 @@ module SnakesAndLaddersGame
       next_player
     end
     
+    def simulate
+      until game_over?
+        play_turn
+      end
+    end
+    
     private
     def next_player
       players.rotate!
