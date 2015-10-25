@@ -9,6 +9,10 @@ describe Square do
     it 'takes a number and assigns it as square value' do
       expect(square).to be_an_instance_of Square
     end
+
+    it 'value should not be less than 0' do
+      expect(square.value).to be > 0
+    end
   end
 
   describe '#enter' do
