@@ -1,9 +1,7 @@
 # SnakesAndLaddersGame
 ## Installation
 
-clone this repo
-
-then run
+Clone this repo and then run
 
     $ gem build snakes_and_ladders_game.gemspec
 
@@ -23,6 +21,12 @@ player2 = Player.new 'player2'
 game = Game.new [player1, player2]
 game.play_turn
 ```
+
+If you would like to simulate the game and see who wins
+```ruby
+game.simulate
+```
+
 
 ## Contributing
 
